@@ -1,0 +1,108 @@
+body {
+    background-color: #212529;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+#top-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#top-buttons .btn {
+    width: 48%;
+    font-size: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#daughterOfMain {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #444;
+    padding: 5px 0;
+    background-color: #212529;;
+}
+
+#daughterOfMain > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    text-align: center;
+}
+
+#id, #date, #debit, #credit {
+    width: 10%;
+}
+
+#name {
+    width: 30%;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    font-size: 10px;
+    padding: 3px 8px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#details {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#details:hover {
+    background-color: #0056b3;
+}
+
+#delete button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#delete button:hover {
+    background-color: #a71d2a;
+}
+
+#add, #trialBalanceButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#add:hover, #trialBalanceButton:hover {
+    background-color: #1e7e34;
+}
+
+a.btn, button.btn {
+    display: inline-block;
+    text-align: center;
+}
+
+span {
+    font-size: 12px;
+}
+
+#daughterOfMain:hover {
+    background-color: #333;
+}

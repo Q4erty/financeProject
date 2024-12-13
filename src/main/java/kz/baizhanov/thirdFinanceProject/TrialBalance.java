@@ -5,10 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class Transaction {
-    private Long id;
-    private String date;
+public class TrialBalance {
     private String name;
-    private int debit;
-    private int credit;
+    private int totalDebit;
+    private int totalCredit;
 }

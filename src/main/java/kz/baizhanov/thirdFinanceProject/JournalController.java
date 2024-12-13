@@ -20,8 +20,13 @@ public class JournalController {
                                  @RequestParam("name") String name,
                                  @RequestParam("debit") int debit,
                                  @RequestParam("credit") int credit){
-        Transaction transaction = new Transaction(date, name, debit, credit);
-        DBManager.addElement(transaction);
+        Transaction transaction = Transaction.builder()
+                .date(date)
+                .name(name)
+                .debit(debit)
+                .credit(credit)
+                .build();
+        DBManager.addTransaction(transaction);
         return "redirect:/finance";
     }
 
@@ -38,4 +43,35 @@ public class JournalController {
         model.addAttribute("transaction", transaction);
         return "about";
     }
+
+    @PostMapping(value = "/update-transaction")
+    public String updateTransaction(@RequestParam("id") Long id,
+                                    @RequestParam("date") String date,
+                                    @RequestParam("name") String name,
+                                    @RequestParam("debit") int debit,
+                                    @RequestParam("credit") int credit){
+        Transaction transaction = Transaction.builder()
+                .id(id)
+                .date(date)
+                .name(name)
+                .debit(debit)
+                .credit(credit)
+                .build();
+        DBManager.updateTransaction(transaction);
+        return "redirect:/finance";
+    }
+
+    @PostMapping(value = "/delete/{id}")
+    public String deleteTransaction(@PathVariable Long id){
+        DBManager.deleteTransaction(id);
+        return "redirect:/finance";
+    }
+
+    @GetMapping(value = "/trial-balance")
+    public String openTrialBalance(Model model) {
+        ArrayList<TrialBalance> trialBalance = DBManager.getTrialBalance();
+        model.addAttribute("trialBalance", trialBalance);
+        return "trial-balance";
+    }
+
 }

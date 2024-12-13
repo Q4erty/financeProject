@@ -1,0 +1,62 @@
+body {
+    background-color: #212529;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#div-for-add {
+    margin-top: 50px;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #ccc;
+}
+
+#add-date-input, #add-name-input, #add-debit-input, #add-credit-input {
+    background-color: #343a40;
+    border-color: #495057;
+    color: #fff;
+}
+
+#add-button-submit-btn, #cancel {
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#add-button-submit-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#add-button-submit-btn:hover {
+    background-color: #218838;
+}
+
+#cancel {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#cancel:hover {
+    background-color: #0056b3;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #495057;
+    background-color: #343a40;
+    color: #fff;
+    box-shadow: none;
+}

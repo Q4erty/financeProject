@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/style-for-add-transaction.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <form th:action="@{'/finance/add-transaction'}" method="post">
-            <div class="row">
-                <label class="form-label">DATE:</label>
-                <input type="date" class="form-control" name="date">
+    <div class="container" id="div-for-add">
+        <form th:action="@{'/finance/add-transaction'}" method="post" id="form-for-add">
+            <div class="row" id="add-date">
+                <label class="form-label" id="add-date-text">DATE:</label>
+                <input type="date" class="form-control" name="date" id="add-date-input">
             </div>
-            <div class="row">
-                <label class="form-label">NAME:</label>
-                <input type="text" class="form-control" name="name">
+            <div class="row" id="add-name">
+                <label class="form-label" id="add-name-text">NAME:</label>
+                <input type="text" class="form-control" name="name" id="add-name-input">
             </div>
-            <div class="row">
-                <label class="form-label">DEBIT:</label>
-                <input type="number" class="form-control" name="debit">
+            <div class="row" id="add-debit">
+                <label class="form-label" id="add-debit-text">DEBIT:</label>
+                <input type="number" class="form-control" name="debit" id="add-debit-input">
             </div>
-            <div class="row">
-                <label class="form-label">CREDIT:</label>
-                <input type="number" class="form-control" name="credit">
+            <div class="row" id="add-credit">
+                <label class="form-label" id="add-credit-text">CREDIT:</label>
+                <input type="number" class="form-control" name="credit" id="add-credit-input">
             </div>
-            <div class="row">
-                <button class="btn btn-success">ADD TRANSACTION</button>
+            <div class="row" id="add-button-submit">
+                <button class="btn btn-success" id="add-button-submit-btn">ADD TRANSACTION</button>
+            </div>
+            <div class="row" id="add-button-cancel">
+                <a class="btn btn-primary" th:href="@{'/finance'}" id="cancel">CANCEL</a>
             </div>
         </form>
     </div>
